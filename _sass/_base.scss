@@ -1,0 +1,47 @@
+/* base */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: $opensans;
+  line-height: 1.5;
+  color: $textgrey;
+  background-image: linear-gradient(45deg, $lightgreen, $lightblue);
+  padding: 16px;
+}
+
+code,
+pre {
+  background: #f5f7f9;
+  color: #757575;
+}
+
+pre {
+  border-left: 2px solid #69c;
+  padding: 16px;
+}
+
+h1,
+h2 {
+  color: $headergrey;
+  font-family: $merryweather;
+}
+
+a,
+a:visited {
+  color: $accent;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

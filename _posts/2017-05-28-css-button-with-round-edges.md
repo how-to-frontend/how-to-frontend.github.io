@@ -2,6 +2,7 @@
 layout: post
 title: "CSS: button with round edges"
 date: 2017-05-28
+topic: "css"
 preview: "In this post we know how to create button with round edges but different width and height."
 ---
 
