@@ -20,6 +20,10 @@ It is simple, if the button has the same width and height and should be totally 
 
 But what if the button should be wide but with round edges?
 
+If we just increase width we get this.
+
+<button class="button" type="button" style="display: block; width: 250px; height: 50px; border-radius: 50%; border: none; background-color: #FF9800; color: white;">Btn</button>
+
 Here css trick comes.
 
 Just give a huge value to button's border-radius.
