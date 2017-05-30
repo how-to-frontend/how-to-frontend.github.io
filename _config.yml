@@ -1,2 +1,4 @@
 name: How To Front-End
 markdown: kramdown
+gems:
+  - jekyll-sitemap
