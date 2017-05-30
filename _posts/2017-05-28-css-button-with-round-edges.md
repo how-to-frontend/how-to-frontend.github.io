@@ -2,6 +2,7 @@
 layout: post
 title: "CSS: button with round edges"
 date: 2017-05-28
+preview: "In this post we know how to create button with round edges but different width and height."
 ---
 
 Sometimes we need to create a button with round edges.
@@ -20,7 +21,7 @@ It is simple, if the button has the same width and height and should be totally 
 
 But what if the button should be wide but with round edges?
 
-If we just increase width we get this.
+If we just increase the width we get this.
 
 <button class="button" type="button" style="display: block; width: 250px; height: 50px; border-radius: 50%; border: none; background-color: #FF9800; color: white;">Btn</button>
 
