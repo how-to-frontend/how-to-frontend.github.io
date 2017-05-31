@@ -23,4 +23,8 @@
   &__example + &__code {
     margin-top: 16px;
   }
+
+  &__code + &__code {
+    margin-top: 8px;
+  }
 }

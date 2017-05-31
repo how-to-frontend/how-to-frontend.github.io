@@ -6,6 +6,10 @@
     display: block;
   }
 
+  &__item + &__item {
+    margin-top: 16px;
+  }
+
   &__link,
   &__link:visited {
     display: block;
@@ -16,13 +20,14 @@
     border-radius: 4px;
     padding: 16px 24px;
     box-sizing: border-box;
+    border: 1px solid transparentize($black, .85);
     color: $textgrey;
-    box-shadow: 0 0 6px 0 transparentize($black, 0.7);
+    box-shadow: 0 0 6px 0 transparentize($black, .7);
     transition: box-shadow 300ms ease-out;
   }
 
   &__link:hover {
-    box-shadow: 0 0 16px -1px transparentize($black, 0.7);
+    box-shadow: 0 0 16px -1px $accent;
   }
 
   &__title {
