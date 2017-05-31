@@ -1,0 +1,40 @@
+.showcase {
+  padding-bottom: 32px;
+  &__header {
+    font-size: 32px;
+    margin: 16px 0 0;
+    padding: 0;
+    color: $headergrey;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__header + &__text {
+    margin-top: 16px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    color: $headergrey;
+  }
+
+  &__text + &__title {
+    margin-top: 16px;
+  }
+
+  &__list{
+    margin: 0;
+    padding: 0;
+  }
+
+  &__title + &__list {
+    margin-top: 8px;
+  }
+}

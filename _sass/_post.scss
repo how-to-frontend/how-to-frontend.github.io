@@ -1,0 +1,26 @@
+.post {
+  padding-bottom: 32px;
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__code {
+  }
+
+  &__example {
+    text-align: center;
+  }
+
+  &__text + &__text,
+  &__text + &__code,
+  &__text + &__example,
+  &__example + &__text,
+  &__code + &__text,
+  &__code + &__example,
+  &__example + &__code {
+    margin-top: 16px;
+  }
+}

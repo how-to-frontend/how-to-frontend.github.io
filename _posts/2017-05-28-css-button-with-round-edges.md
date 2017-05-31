@@ -5,39 +5,47 @@ date: 2017-05-28
 topic: "css"
 preview: "In this post we know how to create button with round edges but different width and height."
 ---
+<div class="post">
+  <p class="post__text">Sometimes we need to create a button with round edges.<br />
+    It is simple, if the button has the same width and height and should be totally round. We just can write</p>
 
-Sometimes we need to create a button with round edges.
+  <div class="post__code">
+    {% highlight css %}
+    .button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    {% endhighlight %}
+  </div>
 
-It is simple, if the button has the same width and height and should be totally round. We just can write
+  <div class="post__example">
+    <button class="button" type="button" style="display: inline-block; width: 50px; height: 50px; border-radius: 50%; border: none; background-color: #FF9800; color: white;">Btn</button>
+  </div>
 
-{% highlight css %}
-.button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-{% endhighlight %}
+  <p class="post__text">But what if the button should be wide but with round edges?<br />
+    If we just increase the width we get this.</p>
 
-<button class="button" type="button" style="display: block; width: 50px; height: 50px; border-radius: 50%; border: none; background-color: #FF9800; color: white;">Btn</button>
+  <div class="post__example">
+    <button class="button" type="button" style="display: inline-block; width: 250px; height: 50px; border-radius: 50%; border: none; background-color: #FF9800; color: white;">Btn</button>
+  </div>
 
-But what if the button should be wide but with round edges?
+  <p class="post__text">Here css trick comes.<br />
+    Just give a huge value to button's border-radius.</p>
 
-If we just increase the width we get this.
+  <div class="post__code">
+    {% highlight css %}
+    .button {
+      width: 250px;
+      height: 50px;
+      border-radius: 9999px;
+    }
+    {% endhighlight %}
+  </div>
 
-<button class="button" type="button" style="display: block; width: 250px; height: 50px; border-radius: 50%; border: none; background-color: #FF9800; color: white;">Btn</button>
+  <div class="post__example">
+    <button class="button" type="button" style="display: inline-block; width: 250px; height: 50px; border-radius: 9999px; border: none; background-color: #FF9800; color: white;">Btn</button>
+  </div>
 
-Here css trick comes.
-
-Just give a huge value to button's border-radius.
-
-{% highlight css %}
-.button {
-  width: 250px;
-  height: 50px;
-  border-radius: 9999px;
-}
-{% endhighlight %}
-
-<button class="button" type="button" style="display: block; width: 250px; height: 50px; border-radius: 9999px; border: none; background-color: #FF9800; color: white;">Btn</button>
-
-Hope this helps.
+  <p class="post__text">Hope this helps.</p>
+</div>

@@ -2,22 +2,21 @@
 layout: default
 title: Main
 ---
-  <h1>Welcome!</h1>
-	<p>I'm George Volokitin. Welcome to my blog about front-end.</p>
-  <p>It is more as notepad. Here I write about things and cases I find interesting and which I learned in my professional activity.</p>
+  <div class="showcase">
+    <h1 class="showcase__header">Welcome!</h1>
+    <p class="showcase__text">I'm George Volokitin. Welcome to my blog about front-end.<br />
+      It is more as notepad. Here I write about things and cases I find interesting and which I learned in my professional activity.</p>
 
-  <h2>Recent posts</h2>
-  <ul class="posts">
-	  {% for post in site.posts %}
-	    <li>
-        <div>
-          <span>{{ post.date | date_to_string }}</span> - 
-          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </div>
-        <div>
-          <p>{{ post.preview }}</p>
-        </div>
-
-      </li>
-	  {% endfor %}
-	</ul>
+    <h2 class="showcase__title">Recent posts</h2>
+    <ul class="showcase__list list">
+      {% for post in site.posts %}
+        <li class="list__item">
+          <a class="list__link" href="{{ post.url }}" title="{{ post.title }}">
+            <span class="list__title">{{ post.title }}</span>
+            <span class="list__date">{{ post.date | date_to_string }}</span>
+            <span class="list__info">{{ post.preview }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
