@@ -1,0 +1,81 @@
+---
+layout: post
+title: "CSS: responsive image container"
+date: 2017-06-15
+topic: "css"
+preview: "Sometimes we have to create responsive container for image and it has to have constant propotions while we resize the browser window for we are able to place some other elements inside it. Take a look how to create it."
+---
+<div class="post">
+  <p class="post__text">Sometimes we have to create responsive container for image and it has to have constant propotions while we resize the browser window for we are able to place some other elements inside it.<br />It is pretty simple.</p>
+
+  <p class="post__text">The steps are:</p>
+  <p class="post__text">1. Create the container. Give it position relative.</p>
+
+  <div class="post__code">
+    {% highlight html %}
+<div class="image-container"></div>{% endhighlight %}
+  </div>
+
+  <div class="post__code">
+    {% highlight css %}
+.image-container {
+  position: relative;
+}{% endhighlight %}
+  </div>
+
+  <p class="post__text">2. Put the spacer empty block inside the container and give it padding top or bottom in percents equal to image's height divided by image's width.<br />
+  Our example image is 1280x1024 px. So padding (I always choose padding-top) should be<br />
+  1024 / 1280 * 100 = 80%.<br />
+  The trick here is that vertical padding given in percents is counted not from parent's height, but from parent's width.</p>
+
+  <p class="post__text">Because the spacer block doesn't have a content it would be semantically right to create 'span' instead of 'div'.</p>
+
+  <div class="post__code">
+    {% highlight html %}
+<div class="image-container">
+  <span class="image-container__spacer"></span>
+</div>{% endhighlight %}
+  </div>
+
+  <div class="post__code">
+    {% highlight css %}
+.image-container__spacer {
+  display: block;
+  padding-top: 80%;
+}{% endhighlight %}
+  </div>
+
+  <p class="post__text">3. And the last step: put the absolutely positioned image inside the container.</p>
+
+  <div class="post__code">
+    {% highlight html %}
+<div class="image-container">
+  <span class="image-container__spacer"></span>
+  <img class="mage-container__image" src="/assets/images/kitten.jpg" alt="Kitten" />
+</div>{% endhighlight %}
+  </div>
+
+  <div class="post__code">
+    {% highlight css %}
+.image-container__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}{% endhighlight %}
+  </div>
+
+  <p class="post__text">And here is the result.<br />
+  I will place the text into the center of block so you can see how it works.<br />
+  Try to resize browser window.</p>
+
+  <div class="post__example">
+    <div style="position: relative; border-radius: 8px; overflow: hidden;">
+      <span style="display: block; padding-top: 80%;"></span>
+      <img src="/assets/images/kitten.jpg" alt="kitten" style="position: absolute; top: 0; left: 0; width: 100%;" />
+      <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font: bold 72px/72px 'Open Sans', Helvetica, Roboto, Arial, sans-serif; color: rgba(255, 255, 255, 0.5);">Meow!</span>
+    </div>
+  </div>
+
+  <p class="post__text">Hope this helps.</p>
+</div>
